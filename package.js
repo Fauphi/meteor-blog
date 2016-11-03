@@ -2,7 +2,7 @@ Package.describe({
   name: 'fauphi:meteor-blog',
   git: 'https://github.com/Fauphi/meteor-blog',
   summary: 'Simple blog with quill-editor.',
-  version: '0.1.1'
+  version: '0.1.3'
 });
 
 Package.onUse(function (api) {
@@ -23,8 +23,8 @@ Package.onUse(function (api) {
     'aldeed:autoform@5.8.1',
     'blaze-html-templates',
     'kadira:blaze-layout@2.3.0',
-    'fauphi:autoform-base64-img',
-    'fauphi:autoform-quill'
+    'fauphi:autoform-base64-img@0.1.2',
+    'fauphi:autoform-quill@0.1.1'
   ], ['client', 'server']);
 
   api.addFiles([  
