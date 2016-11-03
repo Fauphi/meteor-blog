@@ -1,6 +1,6 @@
 Package.describe({
-  name: 'attic-studio:quill-blog',
-  // git: 'https://github.com/fauphi',
+  name: 'fauphi:meteor-blog',
+  git: 'https://github.com/Fauphi/meteor-blog',
   summary: 'Simple blog with quill-editor.',
   version: '0.1.0'
 });
@@ -8,7 +8,7 @@ Package.describe({
 Package.onUse(function (api) {
   // Npm.depends({});
   
-  api.versionsFrom('1.4.1');
+  api.versionsFrom('1.3.2.4');
 
   api.use([
     'ecmascript',
@@ -16,13 +16,15 @@ Package.onUse(function (api) {
     'mongo',
     'templating',
     'reactive-var',
-    'momentjs:moment',
-    'kadira:flow-router',
-    'aldeed:simple-schema',
-    'aldeed:collection2',
-    'aldeed:autoform',
+    'momentjs:moment@2.15.2',
+    'kadira:flow-router@2.12.1',
+    'aldeed:simple-schema@1.5.3',
+    'aldeed:collection2@2.10.0',
+    'aldeed:autoform@5.8.1',
     'blaze-html-templates',
-    'kadira:blaze-layout'
+    'kadira:blaze-layout@2.3.0',
+    'fauphi:autoform-base64-img',
+    'fauphi:autoform-quill'
   ], ['client', 'server']);
 
   api.addFiles([  
@@ -31,11 +33,7 @@ Package.onUse(function (api) {
     'admin/blog.js',
     'admin/edit-entry.html',
     'admin/edit-entry.css',
-    'admin/edit-entry.js',
-    'admin/fileUploadTmpl.js',
-    'admin/fileUploadTmpl.html',
-    'admin/quillEditorTmpl.js',
-    'admin/quillEditorTmpl.html'
+    'admin/edit-entry.js'
   ], 'client');
 
   api.addFiles([
@@ -55,14 +53,5 @@ Package.onUse(function (api) {
     'backend/blog-server.js',
     'backend/publications-server.js',
   ], ['server']);
-
-  api.addFiles([
-    'quill/quill.snow.css'
-  ], 'client');
-
-  // api.export('BlogView');
-});
-
-Npm.depends({
-  quill: '1.1.3'
+  
 });

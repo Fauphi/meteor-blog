@@ -1,34 +1,34 @@
 
 <template name="editBlogEntry">
 	<div id="editBlogEntry">
-		<div class="row">
-			<div class="col-md-1">	
-				<h1>
-					<a href="/admin/blog" class="btn btn-default">
-						<i class="fa fa-chevron-left"></i>
-					</a>
-				</h1>
+		{{#if Template.subscriptionsReady}}
+			<div class="row">
+				<div class="col-md-1">	
+					<h1>
+						<a href="/admin/blog" class="btn btn-default">
+							<i class="fa fa-chevron-left"></i>
+						</a>
+					</h1>
+				</div>
+				<div class="col-md-11">	
+					{{#if isInsert}}
+						<h1>Admin: New blog entry</h1>
+					{{else}}
+						<h1>Admin: Edit blog entry "{{#with getDoc}}{{title}}{{/with}}"</h1>
+					{{/if}}
+				</div>
 			</div>
-			<div class="col-md-11">	
-				{{#if isInsert}}
-					<h1>New entry</h1>
-				{{else}}
-					<h1>Edit entry</h1>
-				{{/if}}
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">	
-				{{#if Template.subscriptionsReady}}
+			<div class="row">
+				<div class="col-md-12">	
 					{{#if isInsert}}
 						<h2>Insert</h2>
 						{{> quickForm collection=getCollection doc=this id="insertBlogEntry" type="method" meteormethod="blog.create" buttonContent="Save"}}
 					{{else}}
 						<h2>Edit</h2>
 						{{> quickForm collection=getCollection doc=getDoc id="updateBlogEntry" type="method-update" meteormethod="blog.update" buttonContent="Save"}}
-					{{/if}}
-				{{/if}}
+					{{/if}}	
+				</div>
 			</div>
-		</div>
+		{{/if}}
 	</div>
 </template>

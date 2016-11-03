@@ -2,7 +2,7 @@
 * @Author: philipp
 * @Date:   2016-11-02 16:47:08
 * @Last Modified by:   philipp
-* @Last Modified time: 2016-11-03 15:21:51
+* @Last Modified time: 2016-11-03 16:58:32
 */
 
 'use strict';
@@ -29,22 +29,6 @@ if(Meteor.isServer) {
     	}
     });
 
-}
-
-if(Meteor.isClient) {
-    AutoForm.addInputType('fileupload', {
-        template: 'fileUpload',
-        valueOut: function () {
-            return this.data('imgBase');
-        }
-    });
-
-    AutoForm.addInputType('quilleditor', {
-        template: 'quillEditor',
-        valueOut: function () {
-            return this.find('.ql-editor').html();
-        }
-    });
 }
 
 Blog.attachSchema(new SimpleSchema({
