@@ -1,0 +1,41 @@
+
+<template name="blog">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-11">
+				<h1>AS Blog</h1>
+			</div>
+			<div class="col-md-1">
+				<h1>
+					<a class="btn btn-success" href="/admin/blog/new">
+						<i class="fa fa-plus"></i>
+					</a>
+				</h1>
+			</div>
+		</div>
+		{{#each blogs}}
+		<div class="row">
+			<div class="entry col-md-4">
+				<img src="{{titlePhoto}}" alt="blog title photo" width="200px"/>
+			</div>
+			<div class="entry col-md-7">
+				<h2>{{title}}</h2>
+				<h4>{{author}}, {{getDate}}</h4>
+				<p>
+					{{preview}}
+				</p>
+			</div>
+			<div class="entry col-md-1">
+				<h1>
+					<a href="/admin/blog/edit/{{_id}}" class="btn btn-default">
+						<i class="fa fa-pencil"></i>
+					</a>
+					<button class="btn btn-danger" data-action="delete-blog-entry">
+						<i class="fa fa-trash"></i>
+					</button>
+				</h1>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</template>

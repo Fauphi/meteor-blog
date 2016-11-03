@@ -1,0 +1,31 @@
+
+<template name="blogView">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>AS Blog</h1>
+			</div>
+		</div>
+		{{#each blogs}}
+		<a class="row" href="/blog/{{_id}}">
+			<div class="entry col-md-4">
+				<img src="{{titlePhoto}}" alt="blog title photo" width="200px"/>
+			</div>
+			<div class="entry col-md-7">
+				<h2>{{title}}</h2>
+				<h4>{{author}}, {{getDate}}</h4>
+				<p>
+					{{preview}}
+				</p>
+			</div>
+			<div class="entry col-md-1">
+				<h1>
+					<a href="/blog/{{_id}}" class="btn btn-default">
+						<i class="fa fa-eye"></i>
+					</a>
+				</h1>
+			</div>
+		</a>
+		{{/each}}
+	</div>	
+</template>
