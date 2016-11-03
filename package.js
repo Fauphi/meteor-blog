@@ -2,7 +2,7 @@ Package.describe({
   name: 'fauphi:meteor-blog',
   git: 'https://github.com/Fauphi/meteor-blog',
   summary: 'Simple blog with quill-editor.',
-  version: '0.1.0'
+  version: '0.1.1'
 });
 
 Package.onUse(function (api) {
