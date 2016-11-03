@@ -1,2 +1,2 @@
-# meteor-blog
+# Meteor-Blog
 Basic blog with Quill-Editor
