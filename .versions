@@ -27,9 +27,9 @@ ecmascript@0.5.8_1
 ecmascript-runtime@0.3.14_1
 ejson@1.0.12
 es5-shim@4.6.14_1
-fauphi:autoform-base64-img@0.1.1
-fauphi:autoform-quill@0.1.0
-fauphi:meteor-blog@0.1.2
+fauphi:autoform-base64-img@0.1.2
+fauphi:autoform-quill@0.1.1
+fauphi:meteor-blog@0.1.3
 geojson-utils@1.0.9
 html-tools@1.0.11
 htmljs@1.0.11
